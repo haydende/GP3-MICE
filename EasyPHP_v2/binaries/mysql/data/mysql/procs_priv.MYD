@@ -1,0 +1,10 @@
+2019-02-27 20:20:39 740 [Note] Event Scheduler: Loaded 0 events
+2019-02-27 20:20:39 740 [Note] C:\Users\Jason\Desktop\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe: ready for connections.
+Version: '5.6.15-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2019-02-27 20:20:48 740 [Note] C:\Users\Jason\Desktop\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe: Normal shutdown
+
+2019-02-27 20:20:48 740 [Note] Giving 0 client threads a chance to die gracefully
+2019-02-27 20:20:48 740 [Note] Event Scheduler: Purging the queue. 0 events
+2019-02-27 20:20:48 740 [Note] Shutting down slave threads
+2019-02-27 20:20:48 740 [Note] Forcefully disconnecting 0 remaining clients
+2019-02-27 20:20:48 740 [Note] Binlog end
