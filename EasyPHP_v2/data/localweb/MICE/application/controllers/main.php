@@ -82,30 +82,28 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('items_view.php', $output);
 	}
-	public function customers()
+	public function booking()
 	{	
 		$this->load->view('header');
 		$crud = new grocery_CRUD();
 		$crud->set_theme('datatables');
-		$crud->set_table('customers');
-		$crud->set_subject('customer');
-		$crud->fields('custID', 'custName', 'custAddress', 'custTown', 'custPostcode', 'custTel', 'custEmail');
-		$crud->required_fields('custID', 'custName', 'custAddress', 'custTown', 'custPostcode', 'custTel', 'custEmail');
-		$crud->display_as('custID', 'CustomerID');
-		$crud->display_as('custName', 'Name');
-		$crud->display_as('custAddress', 'Address');
-		$crud->display_as('custTown', 'Town');
-		$crud->display_as('custPostcode', 'Postcode');
-		$crud->display_as('custTel', 'Phone');
-		$crud->display_as('custEmail', 'Email');
+		$crud->set_table('booking');
+		$crud->set_subject('booking');
+		$crud->fields('Booking_ID', 'No_seats', 'Member_ID', 'Performance_ID', 'Film_ID');
+		$crud->required_fields('Booking_ID', 'No_seats', 'Member_ID', 'Performance_ID', 'Film_ID');
+		$crud->display_as('Booking_ID', 'Booking Number');
+		$crud->display_as('No_seats', 'Number of seats');
+		$crud->display_as('Member_ID', 'Member ID');
+		$crud->display_as('Performance_ID', 'Performance ID');
+		$crud->display_as('Film_ID', 'Film ID');
 		
 		$output = $crud->render();
-		$this->cust_output($output);
+		$this->booking_output($output);
 	}
 	
-	function cust_output($output = null)
+	function booking_output($output = null)
 	{
-		$this->load->view('cust_view.php', $output);
+		$this->load->view('booking_view.php', $output);
 	}
 	
 	public function orderline()
@@ -128,7 +126,7 @@ class Main extends CI_Controller {
 		$output = $crud->render();
 		$this->orderline_output($output);
 	}
-	
+		
 	function orderline_output($output = null)
 	{
 		$this->load->view('orderline_view.php', $output);

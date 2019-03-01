@@ -21,6 +21,7 @@
 		<li><a href='<?php echo site_url('main/items')?>'>Items</a></li>
 		<li><a href='<?php echo site_url('main/customers')?>'>Customers</a></li>
 		<li><a href='<?php echo site_url('main/orderline')?>'>Order Line</a></li>
+		<li><a href='<?php echo site_url('main/booking')?>'>Current Bookings</a></li>
 			<ul id="rightnav">
 			<li><a href='<?php echo site_url('main/blank')?>'>Blank Page</a></li>
 			<li><a href='<?php echo site_url('main/querynav')?>'>Queries</a></li>
