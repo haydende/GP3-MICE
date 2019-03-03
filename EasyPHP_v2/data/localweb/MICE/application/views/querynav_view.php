@@ -10,8 +10,12 @@
 
 <h1>Queries</h1>
 <div align='center'>
-	<button type="submit" onclick="location.href='<?php echo site_url('main/query1')?>'">Total customer orders</button>
-	<button type="submit" onclick="location.href='<?php echo site_url('main/query2')?>'">Ranked items by sales</button>
+	<button type="submit" onclick="location.href='<?php echo site_url('main/query1')?>'">List of MICE cinemas</button> 
+	
+	
+	<!-- Existing code from provided orders system - Left for reference --> 
+	<!-- <button type="submit" onclick="location.href='<?php echo site_url('main/query1')?>'">Total customer orders</button> -->
+	<!-- <button type="submit" onclick="location.href=' <?php echo site_url('main/query2')?>'">Ranked items by sales</button> -->
 </div>
     
 </body>
