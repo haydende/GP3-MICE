@@ -1,0 +1,10 @@
+2019-03-03 15:51:39 11852 [Note] Event Scheduler: Loaded 0 events
+2019-03-03 15:51:39 11852 [Note] C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe: ready for connections.
+Version: '5.6.15-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2019-03-03 15:54:53 11852 [Note] C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe: Normal shutdown
+
+2019-03-03 15:54:53 11852 [Note] Giving 2 client threads a chance to die gracefully
+2019-03-03 15:54:53 11852 [Note] Event Scheduler: Purging the queue. 0 events
+2019-03-03 15:54:53 11852 [Note] Shutting down slave threads
+2019-03-03 15:54:55 11852 [Note] Forcefully disconnecting 0 remaining clients
+2019-03-03 15:54:55 11852 [Note] Binlog end

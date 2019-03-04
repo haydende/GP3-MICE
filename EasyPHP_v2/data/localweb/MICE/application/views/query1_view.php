@@ -21,9 +21,15 @@
 	$tmpl = array ('table_open' => '<table class="mytable">');
 	$this->table->set_template($tmpl); 
 	
+	// if a temp table currently exists, drop it so we can create a new one.
 	$this->db->query('drop table if exists temp');
+	
+	//Create a temp table and specify required columns. 
 	$this->db->query('create temporary table temp as (select Cinema_ID, Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager FROM cinema)');
+	
+	//Present all in the temp table with a SQL select all command. 
 	$query = $this->db->query('select * from temp;');
+	
 	echo $this->table->generate($query);
 ?>
 </div>
