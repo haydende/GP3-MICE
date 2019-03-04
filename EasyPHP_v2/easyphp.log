@@ -704,3 +704,22 @@
 03/03 23:37:48 EasyPHP End EasyPHP...
 >>>>>>> Stashed changes
 >>>>>>> Stashed changes
+04/03 14:42:46 EasyPHP EasyPHP Servers starting
+04/03 14:42:48 EasyPHP Apache CreateProcess "C:\Users\Sansith\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+04/03 14:42:48 EasyPHP CreateProcess "C:\Users\Sansith\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\Sansith\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\my.ini" --language=english"
+04/03 14:42:53 EasyPHP EasyPHP Check version
+04/03 14:57:48 EasyPHP EasyPHP Stop the servers
+04/03 14:57:48 EasyPHP Apache stop event: ap11236_shutdown
+04/03 14:57:49 EasyPHP MySqlSutdown event = MySQLShutdown6704
+04/03 14:57:51 EasyPHP ServerBase::TimerProc : GetProcessVersion MySQL (pid: 6704) error 5
+04/03 14:57:51 EasyPHP ServerBase::TimerProc : GetProcessVersion Apache (pid: 11236) error 5
+04/03 14:59:42 EasyPHP EasyPHP Servers starting
+04/03 14:59:45 EasyPHP Apache CreateProcess "C:\Users\Sansith\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+04/03 14:59:45 EasyPHP CreateProcess "C:\Users\Sansith\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\Sansith\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\my.ini" --language=english"
+04/03 15:02:04 EasyPHP EasyPHP Stop the servers
+04/03 15:02:04 EasyPHP Apache stop event: ap7000_shutdown
+04/03 15:02:05 EasyPHP MySqlSutdown event = MySQLShutdown11648
+04/03 15:02:07 EasyPHP ServerBase::TimerProc : GetProcessVersion MySQL (pid: 11648) error 5
+04/03 15:02:07 EasyPHP ServerBase::TimerProc : GetProcessVersion Apache (pid: 7000) error 5
+04/03 22:44:35 EasyPHP EasyPHP Stop the servers
+04/03 22:44:35 EasyPHP End EasyPHP...
