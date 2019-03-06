@@ -591,3 +591,12 @@
 [Mon Mar 04 23:29:14.923993 2019] [core:notice] [pid 9604:tid 404] AH00094: Command line: 'C:\\Users\\Sansith\\DOCUME~1\\GitHub\\GP3-MICE\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Sansith/Documents/GitHub/GP3-MICE/EasyPHP_v2/binaries/apache'
 [Mon Mar 04 23:29:15.127101 2019] [mpm_winnt:notice] [pid 9604:tid 404] AH00418: Parent: Created child process 7956
 [Mon Mar 04 23:29:15.658357 2019] [mpm_winnt:notice] [pid 7956:tid 412] AH00354: Child: Starting 64 worker threads.
+[Wed Mar 06 12:07:31.487834 2019] [core:warn] [pid 2484:tid 692] AH00098: pid file C:/Users/hayde/Documents/GitHub/GP3-MICE/EasyPHP_v2/binaries/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Mar 06 12:07:31.778045 2019] [mpm_winnt:notice] [pid 2484:tid 692] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Wed Mar 06 12:07:31.778045 2019] [mpm_winnt:notice] [pid 2484:tid 692] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Wed Mar 06 12:07:31.778045 2019] [core:notice] [pid 2484:tid 692] AH00094: Command line: 'C:\\Users\\hayde\\DOCUME~1\\GitHub\\GP3-MICE\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/hayde/Documents/GitHub/GP3-MICE/EasyPHP_v2/binaries/apache'
+[Wed Mar 06 12:07:31.790014 2019] [mpm_winnt:notice] [pid 2484:tid 692] AH00418: Parent: Created child process 10376
+[Wed Mar 06 12:07:32.637747 2019] [mpm_winnt:notice] [pid 10376:tid 764] AH00354: Child: Starting 64 worker threads.
+[Wed Mar 06 12:18:18.108360 2019] [mpm_winnt:notice] [pid 2484:tid 692] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Mar 06 12:18:20.115987 2019] [mpm_winnt:notice] [pid 10376:tid 764] AH00364: Child: All worker threads have exited.
+[Wed Mar 06 12:18:20.252627 2019] [mpm_winnt:notice] [pid 2484:tid 692] AH00430: Parent: Child process 10376 exited successfully.
