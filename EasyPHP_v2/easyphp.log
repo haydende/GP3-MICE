@@ -764,3 +764,27 @@
 06/03 15:38:26 EasyPHP Apache stop event: ap2216_shutdown
 06/03 15:38:27 EasyPHP MySqlSutdown event = MySQLShutdown9752
 06/03 15:38:27 EasyPHP End EasyPHP...
+06/03 19:21:19 EasyPHP EasyPHP Servers starting
+06/03 19:21:20 EasyPHP Apache CreateProcess "C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+06/03 19:21:20 EasyPHP CreateProcess "C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\my.ini" --language=english"
+06/03 19:21:25 EasyPHP EasyPHP Check version
+06/03 19:21:59 EasyPHP EasyPHP Stop the servers
+06/03 19:21:59 EasyPHP Apache stop event: ap9448_shutdown
+06/03 19:22:00 EasyPHP MySqlSutdown event = MySQLShutdown8100
+06/03 19:22:00 EasyPHP End EasyPHP...
+11/03 08:17:07 EasyPHP EasyPHP Servers starting
+11/03 08:17:09 EasyPHP Apache CreateProcess "C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+11/03 08:17:09 EasyPHP CreateProcess "C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\my.ini" --language=english"
+11/03 08:17:14 EasyPHP EasyPHP Check version
+11/03 08:40:36 EasyPHP EasyPHP Stop the servers
+11/03 08:40:36 EasyPHP Apache stop event: ap3052_shutdown
+11/03 08:40:37 EasyPHP MySqlSutdown event = MySQLShutdown3924
+11/03 08:40:37 EasyPHP End EasyPHP...
+11/03 09:22:05 EasyPHP EasyPHP Servers starting
+11/03 09:22:06 EasyPHP Apache CreateProcess "C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+11/03 09:22:06 EasyPHP CreateProcess "C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\my.ini" --language=english"
+11/03 09:22:11 EasyPHP EasyPHP Check version
+11/03 09:59:12 EasyPHP EasyPHP Stop the servers
+11/03 09:59:12 EasyPHP Apache stop event: ap8752_shutdown
+11/03 09:59:13 EasyPHP MySqlSutdown event = MySQLShutdown5640
+11/03 09:59:13 EasyPHP End EasyPHP...

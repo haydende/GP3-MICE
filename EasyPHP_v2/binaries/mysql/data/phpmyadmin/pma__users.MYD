@@ -1,0 +1,7 @@
+2019-03-11 09:59:13 5640 [Note] C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe: Normal shutdown
+
+2019-03-11 09:59:13 5640 [Note] Giving 0 client threads a chance to die gracefully
+2019-03-11 09:59:13 5640 [Note] Event Scheduler: Purging the queue. 0 events
+2019-03-11 09:59:13 5640 [Note] Shutting down slave threads
+2019-03-11 09:59:13 5640 [Note] Forcefully disconnecting 0 remaining clients
+2019-03-11 09:59:13 5640 [Note] Binlog end
