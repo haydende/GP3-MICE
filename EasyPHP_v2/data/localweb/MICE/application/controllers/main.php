@@ -17,47 +17,39 @@ class Main extends CI_Controller {
 		$this->load->view('home');
 	}
 	
-	public function orders()
+	public function cinema()
 	{	
 		$this->load->view('header');
 		$crud = new grocery_CRUD();
 		$crud->set_theme('datatables');
 		
 		//table name exact from database
-		$crud->set_table('orders');
+		$crud->set_table('cinema');
 		
 		//give focus on name used for operations e.g. Add Order, Delete Order
-		$crud->set_subject('Order');
+		$crud->set_subject('Cinema');
 		
 		//the columns function lists attributes you see on frontend view of the table
-		$crud->columns('invoiceNo', 'date', 'custID', 'items');
+		$crud->columns('Cinema_ID', 'Cinema_Name', 'Cinema_Location', 'Cinema_Address', 'Cinema_Manager');
 	
 		//the fields function lists attributes to see on add/edit forms.
-		//Note no inclusion of invoiceNo as this is auto-incrementing
-		$crud->fields('date', 'custID', 'items');
-		
-		//set the foreign keys to appear as drop-down menus
-		// ('this fk column','referencing table', 'column in referencing table')
-		$crud->set_relation('custID','customers','custID');
-		
-		//many-to-many relationship with link table see grocery crud website: www.grocerycrud.com/examples/set_a_relation_n_n
-		//('give a new name to related column for list in fields here', 'join table', 'other parent table', 'this fk in join table', 'other fk in join table', 'other parent table's viewable column to see in field')
-		$crud->set_relation_n_n('items', 'order_items', 'items', 'invoice_no', 'item_id', 'itemDesc');
+		//Note no inclusion of Cinema_ID as this is auto-incrementing
+		$crud->fields('Cinema_Name', 'Cinema_Location', 'Cinema_Address', 'Cinema_Manager');
 		
 		//form validation (could match database columns set to "not null")
-		$crud->required_fields('invoiceNo', 'date', 'custID');
+		$crud->required_fields('Cinema_ID', 'Cinema_Name', 'Cinema_Location', 'Cinema_Address', 'Cinema_Manager');
 		
 		//change column heading name for readability ('columm name', 'name to display in frontend column header')
-		$crud->display_as('custID', 'CustomerID');
+		$crud->display_as('Cinema ID', 'Cinema Name', 'Cinema Location', 'Cinema Address', 'Cinema Manager');
 		
 		$output = $crud->render();
-		$this->orders_output($output);
+		$this->cinema_output($output);
 	}
 	
-	function orders_output($output = null)
+	function Cinema_output($output = null)
 	{
 		//this function links up to corresponding page in the views folder to display content for this table
-		$this->load->view('orders_view.php', $output);
+		$this->load->view('cinema_view.php', $output);
 	}
 
 	public function items()
