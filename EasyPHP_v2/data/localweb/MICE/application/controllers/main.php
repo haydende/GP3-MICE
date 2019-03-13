@@ -30,7 +30,7 @@ class Main extends CI_Controller {
 		$crud->set_subject('Cinema');
 		
 		//the columns function lists attributes you see on frontend view of the table
-		$crud->columns('Cinema_ID', 'Cinema_Name', 'Cinema_Location', 'Cinema_Address', 'Cinema_Manager');
+		$crud->columns( 'Cinema_Name', 'Cinema_Location', 'Cinema_Address', 'Cinema_Manager');
 	
 		//the fields function lists attributes to see on add/edit forms.
 		//Note no inclusion of Cinema_ID as this is auto-incrementing
@@ -52,28 +52,7 @@ class Main extends CI_Controller {
 		$this->load->view('cinema_view.php', $output);
 	}
 
-	public function items()
-	{	
-		$this->load->view('header');
-		$crud = new grocery_CRUD();
-		$crud->set_theme('datatables');
-		
-		$crud->set_table('items');
-		$crud->set_subject('item');
-		$crud->columns('itemID', 'itemDesc', 'orders');
-		$crud->fields('itemDesc', 'orders');
-		$crud->required_fields('itemID', 'itemDesc');
-		$crud->set_relation_n_n('orders', 'order_items', 'orders', 'item_id', 'invoice_no', 'invoiceNo');
-		$crud->display_as('itemDesc', 'Description');
-		
-		$output = $crud->render();
-		$this->items_output($output);
-	}
-	
-	function items_output($output = null)
-	{
-		$this->load->view('items_view.php', $output);
-	}
+
 	public function booking()
 	{	
 		$this->load->view('header');
@@ -96,32 +75,6 @@ class Main extends CI_Controller {
 	function booking_output($output = null)
 	{
 		$this->load->view('booking_view.php', $output);
-	}
-	
-	public function orderline()
-	{	
-		$this->load->view('header');
-		$crud = new grocery_CRUD();
-		$crud->set_theme('datatables');
-		$crud->set_table('order_items');
-		$crud->set_subject('order line');
-		$crud->fields('invoice_no', 'item_id', 'itemQty', 'itemPrice');
-		$crud->set_relation('invoice_no','orders','invoiceNo');
-		//have multiple columns show in one FK column by concatenation:  www.grocerycrud.com/forums/topic/479-concatenate-two-or-more-fields-into-one-field/
-		$crud->set_relation('item_id','items','{itemID} - {itemDesc}');
-		$crud->required_fields('invoice_no', 'item_id', 'itemQty', 'itemPrice');
-		$crud->display_as('invoice_no', 'InvoiceNo');
-		$crud->display_as('item_id', 'ItemID');
-		$crud->display_as('itemQty', 'Quantity');
-		$crud->display_as('itemPrice', 'Price');
-		
-		$output = $crud->render();
-		$this->orderline_output($output);
-	}
-		
-	function orderline_output($output = null)
-	{
-		$this->load->view('orderline_view.php', $output);
 	}
 	
 	public function querynav()
@@ -148,3 +101,56 @@ class Main extends CI_Controller {
 		$this->load->view('blank_view');
 	}
 }
+
+
+	//original orders functions below - commented out so it can be used for future reference
+	
+	// public function items()
+	// {	
+		// $this->load->view('header');
+		// $crud = new grocery_CRUD();
+		// $crud->set_theme('datatables');
+		
+		// $crud->set_table('items');
+		// $crud->set_subject('item');
+		// $crud->columns('itemID', 'itemDesc', 'orders');
+		// $crud->fields('itemDesc', 'orders');
+		// $crud->required_fields('itemID', 'itemDesc');
+		// $crud->set_relation_n_n('orders', 'order_items', 'orders', 'item_id', 'invoice_no', 'invoiceNo');
+		// $crud->display_as('itemDesc', 'Description');
+		
+		// $output = $crud->render();
+		// $this->items_output($output);
+	// }
+	
+	// function items_output($output = null)
+	// {
+		// $this->load->view('items_view.php', $output);
+	//}
+	
+	
+	// public function orderline()
+	// {	
+		// $this->load->view('header');
+		// $crud = new grocery_CRUD();
+		// $crud->set_theme('datatables');
+		// $crud->set_table('order_items');
+		// $crud->set_subject('order line');
+		// $crud->fields('invoice_no', 'item_id', 'itemQty', 'itemPrice');
+		// $crud->set_relation('invoice_no','orders','invoiceNo');
+		// //have multiple columns show in one FK column by concatenation:  www.grocerycrud.com/forums/topic/479-concatenate-two-or-more-fields-into-one-field/
+		// $crud->set_relation('item_id','items','{itemID} - {itemDesc}');
+		// $crud->required_fields('invoice_no', 'item_id', 'itemQty', 'itemPrice');
+		// $crud->display_as('invoice_no', 'InvoiceNo');
+		// $crud->display_as('item_id', 'ItemID');
+		// $crud->display_as('itemQty', 'Quantity');
+		// $crud->display_as('itemPrice', 'Price');
+		
+		// $output = $crud->render();
+		// $this->orderline_output($output);
+	// }
+		
+	// function orderline_output($output = null)
+	// {
+		// $this->load->view('orderline_view.php', $output);
+	//}

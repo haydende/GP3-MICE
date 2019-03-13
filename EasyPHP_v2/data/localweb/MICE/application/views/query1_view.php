@@ -15,6 +15,8 @@
 <div align='center'>
 	<button type="submit" onclick="location.href='<?php echo site_url('main/querynav')?>'">Back to queries</button>
 </div>
+
+
 <h2>List of current MICE cinemas</h2>
 <div align='center'>
 <?php
@@ -28,7 +30,7 @@
 	$this->db->query('create temporary table temp as (select Cinema_ID, Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager FROM cinema)');
 	
 	//Present all in the temp table with a SQL select all command. 
-	$query = $this->db->query('select * from temp;');
+	$query = $this->db->query('select Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager from temp;');
 	
 	echo $this->table->generate($query);
 ?>

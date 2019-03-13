@@ -3,16 +3,19 @@
 <head>
 	<meta charset="utf-8" />
 	<style>
-		h1 {text-align: center; font-family: Calibri; color: purple; font-size: 70pt}
+		h1 {text-align: center; font-family: Calibri; color: black; font-size: 45pt; padding-bottom: 0.5px}
+		h2 {text-align: center; font-family: Calibri; color: black; font-size: 45pt; padding-top: 0.5px}
 		p.p-centre { text-align: center; font-family: Arial; }
-		#reel { display: block; padding-top: 20px; margin-left: auto; margin-right: auto; }		
+		#reel { display: block; padding-top: 40px; margin-left: auto; margin-right: auto; }		
 	</style>
 </head>
 <body>
 
-<h1>Testing the application</h1>
+<h1>Official booking site for MICE cinemas</h1>
+<h2>old film festival</h2>
 
-<p class="p-centre">This system allows staff at International Widgets to manage stocked items, customers and orders.</p>
+
+<p class="p-centre">This site offers a range of functionality</p>
 <p class="p-centre">Click one of the navigation links to begin.</p>
 
 <div align="center">

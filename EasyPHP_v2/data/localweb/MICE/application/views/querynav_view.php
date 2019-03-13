@@ -8,9 +8,10 @@
 </head>
 <body>
 
-<h1>Queries</h1>
+<h1>Available system queries</h1>
 <div align='center'>
-	<button type="submit" onclick="location.href='<?php echo site_url('main/query1')?>'">List of MICE cinemas</button> 
+	<button type="submit" onclick="location.href='<?php echo site_url('main/query1')?>'">List all current MICE cinemas</button> 
+	<button type="submit" onclick="location.href='<?php echo site_url('main/query2')?>'">List all members</button>
 	
 	
 	<!-- Existing code from provided orders system - Left for reference --> 

@@ -5,6 +5,7 @@
 	<style>
 		h1 { text-align: center; 	font-family: Calibri; }
 	</style>
+	
 <?php 
 foreach($css_files as $file): ?>
 	<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
@@ -13,9 +14,10 @@ foreach($css_files as $file): ?>
 	<script src="<?php echo $file; ?>"></script>
 <?php endforeach; ?>
 </head>
+
 <body>
 
-<h1>Cinemas</h1>
+<h1>Mice-OFF Cinemas</h1>
     <div>
 		<?php echo $output; ?>
     </div>
