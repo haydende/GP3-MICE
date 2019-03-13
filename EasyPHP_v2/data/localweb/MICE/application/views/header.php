@@ -22,7 +22,7 @@
 		<li><a href='<?php echo site_url('main/booking')?>'>Current Bookings</a></li>
 			<ul id="rightnav">
 			
-			<li><a href='<?php echo site_url('main/querynav')?>'>Login/Register</a></li>
+			<li><a href='<?php echo site_url('main/login_view')?>'>Login/Register</a></li>
 			<li><a href='<?php echo site_url('main/querynav')?>'>System Information</a></li>
 			</ul>
 		</ul>

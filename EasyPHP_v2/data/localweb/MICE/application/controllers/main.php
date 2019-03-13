@@ -82,6 +82,12 @@ class Main extends CI_Controller {
 		$this->load->view('header');
 		$this->load->view('querynav_view');
 	}
+	
+	public function login_view()
+	{
+		$this->load->view('header');
+		$this->load->view('login_view');
+	}
 		
 	public function query1()
 	{	

@@ -1,1 +1,10 @@
-ÿlocalhost                                                                                                                                                                           root                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       R‰	
+ÿlocalhost                                                                                                                                                                           root                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       R‰	2019-03-13 19:12:09 12992 [Note] Event Scheduler: Loaded 0 events
+2019-03-13 19:12:09 12992 [Note] C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe: ready for connections.
+Version: '5.6.15-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
+2019-03-13 19:14:42 12992 [Note] C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe: Normal shutdown
+
+2019-03-13 19:14:42 12992 [Note] Giving 1 client threads a chance to die gracefully
+2019-03-13 19:14:42 12992 [Note] Event Scheduler: Purging the queue. 0 events
+2019-03-13 19:14:42 12992 [Note] Shutting down slave threads
+2019-03-13 19:14:44 12992 [Note] Forcefully disconnecting 0 remaining clients
+2019-03-13 19:14:44 12992 [Note] Binlog end
