@@ -812,3 +812,19 @@
 13/03 14:42:51 EasyPHP Apache stop event: ap4176_shutdown
 13/03 14:42:52 EasyPHP MySqlSutdown event = MySQLShutdown10152
 13/03 14:42:52 EasyPHP End EasyPHP...
+13/03 14:48:20 EasyPHP EasyPHP Servers starting
+13/03 14:48:22 EasyPHP Apache CreateProcess "C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+13/03 14:48:22 EasyPHP CreateProcess "C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\my.ini" --language=english"
+13/03 14:48:27 EasyPHP EasyPHP Check version
+13/03 15:25:49 EasyPHP EasyPHP Stop the servers
+13/03 15:25:49 EasyPHP Apache stop event: ap10824_shutdown
+13/03 15:25:49 EasyPHP MySqlSutdown event = MySQLShutdown6192
+13/03 15:25:49 EasyPHP End EasyPHP...
+13/03 15:29:39 EasyPHP EasyPHP Servers starting
+13/03 15:29:41 EasyPHP Apache CreateProcess "C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+13/03 15:29:41 EasyPHP CreateProcess "C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\my.ini" --language=english"
+13/03 15:29:46 EasyPHP EasyPHP Check version
+13/03 15:47:00 EasyPHP EasyPHP Stop the servers
+13/03 15:47:00 EasyPHP Apache stop event: ap9176_shutdown
+13/03 15:47:01 EasyPHP MySqlSutdown event = MySQLShutdown6376
+13/03 15:47:01 EasyPHP End EasyPHP...

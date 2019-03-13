@@ -673,3 +673,23 @@
 [Wed Mar 13 14:42:51.785494 2019] [mpm_winnt:notice] [pid 4176:tid 604] AH00422: Parent: Received shutdown signal -- Shutting down the server.
 [Wed Mar 13 14:42:53.786309 2019] [mpm_winnt:notice] [pid 8680:tid 716] AH00364: Child: All worker threads have exited.
 [Wed Mar 13 14:42:53.813372 2019] [mpm_winnt:notice] [pid 4176:tid 604] AH00430: Parent: Child process 8680 exited successfully.
+[Wed Mar 13 14:48:23.595837 2019] [mpm_winnt:notice] [pid 10824:tid 756] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Wed Mar 13 14:48:23.596837 2019] [mpm_winnt:notice] [pid 10824:tid 756] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Wed Mar 13 14:48:23.596837 2019] [core:notice] [pid 10824:tid 756] AH00094: Command line: 'C:\\Users\\Jason\\DOCUME~1\\GitHub\\GP3-MICE\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Jason/Documents/GitHub/GP3-MICE/EasyPHP_v2/binaries/apache'
+[Wed Mar 13 14:48:23.612831 2019] [mpm_winnt:notice] [pid 10824:tid 756] AH00418: Parent: Created child process 4832
+[Wed Mar 13 14:48:24.808511 2019] [mpm_winnt:notice] [pid 4832:tid 676] AH00354: Child: Starting 64 worker threads.
+[Wed Mar 13 15:25:49.139543 2019] [mpm_winnt:notice] [pid 10824:tid 756] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Mar 13 15:25:51.142594 2019] [mpm_winnt:notice] [pid 4832:tid 676] AH00364: Child: All worker threads have exited.
+[Wed Mar 13 15:25:51.168639 2019] [mpm_winnt:notice] [pid 10824:tid 756] AH00430: Parent: Child process 4832 exited successfully.
+[Wed Mar 13 15:29:42.572278 2019] [mpm_winnt:notice] [pid 9176:tid 648] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Wed Mar 13 15:29:42.573260 2019] [mpm_winnt:notice] [pid 9176:tid 648] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Wed Mar 13 15:29:42.573260 2019] [core:notice] [pid 9176:tid 648] AH00094: Command line: 'C:\\Users\\Jason\\DOCUME~1\\GitHub\\GP3-MICE\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Jason/Documents/GitHub/GP3-MICE/EasyPHP_v2/binaries/apache'
+[Wed Mar 13 15:29:42.585260 2019] [mpm_winnt:notice] [pid 9176:tid 648] AH00418: Parent: Created child process 6480
+[Wed Mar 13 15:29:43.832859 2019] [mpm_winnt:notice] [pid 6480:tid 760] AH00354: Child: Starting 64 worker threads.
+[Wed Mar 13 15:42:51.335344 2019] [:error] [pid 6480:tid 1176] [client 127.0.0.1:54925] script 'C:/Users/Jason/Documents/GitHub/GP3-MICE/EasyPHP_v2/data/localweb/action_page.php' not found or unable to stat, referer: http://localhost:8080/MICE/index.php/main/querynav
+[Wed Mar 13 15:43:46.543039 2019] [:error] [pid 6480:tid 1176] [client 127.0.0.1:54947] script 'C:/Users/Jason/Documents/GitHub/GP3-MICE/EasyPHP_v2/data/localweb/action_page.php' not found or unable to stat, referer: http://localhost:8080/MICE/index.php/main/querynav
+[Wed Mar 13 15:45:07.967709 2019] [:error] [pid 6480:tid 1176] [client 127.0.0.1:54984] script 'C:/Users/Jason/Documents/GitHub/GP3-MICE/EasyPHP_v2/data/localweb/action_page.php' not found or unable to stat, referer: http://localhost:8080/MICE/index.php/main/querynav
+[Wed Mar 13 15:45:11.542477 2019] [:error] [pid 6480:tid 1176] [client 127.0.0.1:54987] script 'C:/Users/Jason/Documents/GitHub/GP3-MICE/EasyPHP_v2/data/localweb/action_page.php' not found or unable to stat, referer: http://localhost:8080/MICE/index.php/main/querynav
+[Wed Mar 13 15:47:00.669176 2019] [mpm_winnt:notice] [pid 9176:tid 648] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Mar 13 15:47:02.669483 2019] [mpm_winnt:notice] [pid 6480:tid 760] AH00364: Child: All worker threads have exited.
+[Wed Mar 13 15:47:02.694031 2019] [mpm_winnt:notice] [pid 9176:tid 648] AH00430: Parent: Child process 6480 exited successfully.

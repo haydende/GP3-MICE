@@ -2740,3 +2740,55 @@ InnoDB: for more information.
 2019-03-13 14:42:55 10152 [Note] Shutting down plugin 'binlog'
 2019-03-13 14:42:55 10152 [Note] C:\Users\Jason\DOCUME~1\GitHub\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe: Shutdown complete
 
+2019-03-13 14:48:22 6192 [Note] Plugin 'FEDERATED' is disabled.
+2019-03-13 14:48:22 6192 [Note] InnoDB: The InnoDB memory heap is disabled
+2019-03-13 14:48:22 6192 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2019-03-13 14:48:22 6192 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2019-03-13 14:48:22 6192 [Note] InnoDB: Not using CPU crc32 instructions
+2019-03-13 14:48:22 6192 [Note] InnoDB: Initializing buffer pool, size = 20.0M
+2019-03-13 14:48:22 6192 [Note] InnoDB: Completed initialization of buffer pool
+2019-03-13 14:48:22 6192 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-03-13 14:48:22 1ea0 InnoDB: Error: page 57 log sequence number 3292847
+InnoDB: is in the future! Current system log sequence number 3292418.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2019-03-13 14:48:22 1ea0 InnoDB: Error: page 318 log sequence number 3292847
+InnoDB: is in the future! Current system log sequence number 3292418.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2019-03-13 14:48:23 6192 [Note] InnoDB: 128 rollback segment(s) are active.
+2019-03-13 14:48:23 6192 [Note] InnoDB: Waiting for purge to start
+2019-03-13 14:48:23 6192 [Note] InnoDB: 5.6.15 started; log sequence number 3292418
+2019-03-13 14:48:23 6192 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+2019-03-13 14:48:23 6192 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+2019-03-13 14:48:23 6192 [Note] Server socket created on IP: '127.0.0.1'.
+2019-03-13 15:29:41 6376 [Note] Plugin 'FEDERATED' is disabled.
+2019-03-13 15:29:41 6376 [Note] InnoDB: The InnoDB memory heap is disabled
+2019-03-13 15:29:41 6376 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2019-03-13 15:29:41 6376 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2019-03-13 15:29:41 6376 [Note] InnoDB: Not using CPU crc32 instructions
+2019-03-13 15:29:41 6376 [Note] InnoDB: Initializing buffer pool, size = 20.0M
+2019-03-13 15:29:41 6376 [Note] InnoDB: Completed initialization of buffer pool
+2019-03-13 15:29:42 6376 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-03-13 15:29:42 14ec InnoDB: Error: page 57 log sequence number 3292847
+InnoDB: is in the future! Current system log sequence number 3292428.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2019-03-13 15:29:42 14ec InnoDB: Error: page 318 log sequence number 3292847
+InnoDB: is in the future! Current system log sequence number 3292428.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.6/en/forcing-innodb-recovery.html
+InnoDB: for more information.
+2019-03-13 15:29:42 6376 [Note] InnoDB: 128 rollback segment(s) are active.
+2019-03-13 15:29:42 6376 [Note] InnoDB: Waiting for purge to start
+2019-03-13 15:29:42 6376 [Note] InnoDB: 5.6.15 started; log sequence number 3292428
+2019-03-13 15:29:42 6376 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+2019-03-13 15:29:42 6376 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+2019-03-13 15:29:42 6376 [Note] Server socket created on IP: '127.0.0.1'.
