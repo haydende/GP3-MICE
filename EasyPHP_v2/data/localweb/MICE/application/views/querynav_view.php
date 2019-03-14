@@ -5,6 +5,18 @@
 	<style>
 		h1 {text-align: center; font-family: Calibri;}
 		
+/*body css*/
+body {
+	font-family: source-sans-pro;
+	background-color: #f2f2f2;
+	margin-top: 15px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200;
+}	
+		
 		select {
 		width: 30%;
 		padding: 16px 20px;
@@ -14,10 +26,20 @@
 		text-indent: 5px;
 		}
 		
+/*container css*/
+.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+}
+		
 	</style>
 </head>
 <body>
 
+<div id="container" style="background-color:#FFFFFF ">
+	
 <h1>Available system queries</h1>
 
 <div align='center'>
@@ -25,7 +47,9 @@
 	  <option type="submit" onclick="location.href='<?php echo site_url('main/query1')?>'">List all current MICE cinemas</option>
 	  <option type="submit" onclick="location.href='<?php echo site_url('main/query2')?>'">List all current MICE members</option>
 	</select> 
-</div> -->
+</div>
+	
+</div>
 
 </body>
 </html>

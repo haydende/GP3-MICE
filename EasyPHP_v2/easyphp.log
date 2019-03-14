@@ -881,3 +881,12 @@
 14/03 13:02:28 EasyPHP ServerBase::TimerProc : GetProcessVersion Apache (pid: 7132) error 5
 14/03 13:02:28 EasyPHP EasyPHP Stop the servers
 14/03 13:02:28 EasyPHP End EasyPHP...
+14/03 13:08:20 EasyPHP EasyPHP Servers starting
+14/03 13:08:21 EasyPHP Apache CreateProcess "C:\Users\esteg\Desktop\GP32\GP3-MICE\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+14/03 13:08:21 EasyPHP CreateProcess "C:\Users\esteg\Desktop\GP32\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\esteg\Desktop\GP32\GP3-MICE\EASYPH~1\binaries\mysql\my.ini" --language=english"
+14/03 13:08:26 EasyPHP EasyPHP Check version
+14/03 14:03:17 EasyPHP EasyPHP Stop the servers
+14/03 14:03:17 EasyPHP Apache stop event: ap17236_shutdown
+14/03 14:03:18 EasyPHP MySqlSutdown event = MySQLShutdown17336
+14/03 14:03:19 EasyPHP EasyPHP Stop the servers
+14/03 14:03:19 EasyPHP End EasyPHP...

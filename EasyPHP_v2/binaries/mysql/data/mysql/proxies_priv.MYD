@@ -8,3 +8,6 @@ Version: '5.6.15-log'  socket: ''  port: 3306  MySQL Community Server (GPL)
 2019-03-13 19:14:42 12992 [Note] Shutting down slave threads
 2019-03-13 19:14:44 12992 [Note] Forcefully disconnecting 0 remaining clients
 2019-03-13 19:14:44 12992 [Note] Binlog end
+2019-03-14 13:08:21 17336 [Note] Event Scheduler: Loaded 0 events
+2019-03-14 13:08:21 17336 [Note] C:\Users\esteg\Desktop\GP32\GP3-MICE\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe: ready for connections.
+Version: '5.6.15-log'  socket: ''  port: 3306  MySQL Community Server (GPL)

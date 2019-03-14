@@ -7,7 +7,7 @@
 body {
 	font-family: source-sans-pro;
 	background-color: #f2f2f2;
-	margin-top: 0px;
+	margin-top: 15px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
