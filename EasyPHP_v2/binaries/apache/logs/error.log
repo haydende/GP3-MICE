@@ -731,3 +731,16 @@
 [Thu Mar 14 08:48:28.460781 2019] [mpm_winnt:notice] [pid 1116:tid 652] AH00422: Parent: Received shutdown signal -- Shutting down the server.
 [Thu Mar 14 08:48:30.490881 2019] [mpm_winnt:notice] [pid 6776:tid 656] AH00364: Child: All worker threads have exited.
 [Thu Mar 14 08:48:30.523050 2019] [mpm_winnt:notice] [pid 1116:tid 652] AH00430: Parent: Child process 6776 exited successfully.
+[Thu Mar 14 11:18:11.568204 2019] [mpm_winnt:notice] [pid 7132:tid 652] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Thu Mar 14 11:18:11.568204 2019] [mpm_winnt:notice] [pid 7132:tid 652] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Thu Mar 14 11:18:11.568204 2019] [core:notice] [pid 7132:tid 652] AH00094: Command line: 'C:\\Users\\esteg\\Desktop\\GP32\\GP3-MICE\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/esteg/Desktop/GP32/GP3-MICE/EasyPHP_v2/binaries/apache'
+[Thu Mar 14 11:18:11.568204 2019] [mpm_winnt:notice] [pid 7132:tid 652] AH00418: Parent: Created child process 12884
+[Thu Mar 14 11:18:12.132802 2019] [mpm_winnt:notice] [pid 12884:tid 684] AH00354: Child: Starting 64 worker threads.
+[Thu Mar 14 11:23:02.156592 2019] [mpm_winnt:warn] [pid 12884:tid 1524] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 14 11:23:02.156592 2019] [mpm_winnt:warn] [pid 12884:tid 1524] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 14 11:23:02.156592 2019] [mpm_winnt:warn] [pid 12884:tid 1524] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 14 11:23:02.156592 2019] [mpm_winnt:warn] [pid 12884:tid 1524] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 14 11:23:02.156592 2019] [mpm_winnt:warn] [pid 12884:tid 1524] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Thu Mar 14 13:02:25.469867 2019] [mpm_winnt:notice] [pid 7132:tid 652] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Mar 14 13:02:27.475147 2019] [mpm_winnt:notice] [pid 12884:tid 684] AH00364: Child: All worker threads have exited.
+[Thu Mar 14 13:02:27.509627 2019] [mpm_winnt:notice] [pid 7132:tid 652] AH00430: Parent: Child process 12884 exited successfully.
