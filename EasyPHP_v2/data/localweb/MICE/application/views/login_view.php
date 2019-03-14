@@ -18,7 +18,7 @@
 		  box-sizing: border-box;
 		}
 
-		/* Set a style for all buttons */
+		<!--Set a style for all buttons-->
 		button {
 		  background-color: black;
 		  color: white;
@@ -29,7 +29,7 @@
 		  width: 100%;
 		}
 
-		/* Add a hover effect for buttons */
+		<!--Add a hover effect for the buttons (change colour)-->
 		button:hover {
 		  opacity: 0.8;
 		}
@@ -38,7 +38,7 @@
 		
 </style>
 
-<form action="action_page.php">
+<form action="main/home">
 
   <div class="container" align='center'>
     <label for="uname"><b>Username</b></label>
