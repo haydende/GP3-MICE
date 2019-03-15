@@ -64,18 +64,35 @@ body {
 	margin-left: 0px;
 	color: #A3A3A3;
 }
-		
+	
+.mySlides {display:none;}
 		
 	
 	</style>
+	
+	
+	
+	
 </head>
+	
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
 <body>
 
 
 	<div id="container">
-	<div align="center">
+	<!--<div align="center">
 	<img id="MICE_LOGO" src="assets/images/MICE_LOGO.jpg" alt="MICE_LOGO" height="260" width="380">
-	</div>
+	</div>-->
+		
+<div class="w3-content w3-display-container" style="max-width:100%">
+  <img class="mySlides" src="assets/images/image1.jpg" style="width:100%">
+  <img class="mySlides" src="assets/images/image2.jpg" style="width:100%">
+  <img class="mySlides" src="assets/images/image3.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>	
 	
 
 	<h1>Official MICE old film festival website</h1>
@@ -109,7 +126,35 @@ body {
     </div>
   </div>
 		
+		
+
+	
+		
+		
 </div>
+	
+	
+	<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+	
+
 	
 	
 
