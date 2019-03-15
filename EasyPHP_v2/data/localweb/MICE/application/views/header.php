@@ -18,7 +18,9 @@
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 50px;
 	background-color: #D5D5D5;
+	
 	
 }	
 		
@@ -32,7 +34,7 @@
 	
 	
 	<div id="container">
-		<ul id="nav">
+		<ul id="nav" style="margin-bottom: 10px;">
 		<li><a href='<?php echo site_url('')?>'>Home</a></li>
 		<li><a href='<?php echo site_url('main/cinema')?>'>MICE-OFF Cinemas</a></li>
 		<li><a href='<?php echo site_url('main/booking')?>'>Current Bookings</a></li>
