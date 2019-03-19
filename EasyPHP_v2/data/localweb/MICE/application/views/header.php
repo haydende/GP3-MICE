@@ -14,17 +14,52 @@
 	#nav li a:hover {background-color: #354263;}
 	#nav a:link, a:visited {border-radius: 0px 0px 0px 0px; }	
 	
-	ul {list-style: none;padding: 0px;margin: 0px;}
-	ul li {display: block;position: relative;float: left;border: none}
-	li ul {display: none;}
-	ul li a {display: block;background: #000;padding: 5px 10px 5px 10px;text-decoration: none;
-			   white-space: nowrap;color: #fff;}
-	ul li a:hover {background: #f00;}
-	li:hover ul {display: block; position: absolute;}
-	li:hover li {float: none;}
-	li:hover a {background: #f00;}
-	li:hover li a:hover {background: #000;}
-	#drop-nav li ul li {border-top: 0px;}
+		/* The dropdown container */
+	.dropdown {
+	  float: left;
+	  overflow: hidden;
+	}
+
+	/* Dropdown button */
+	.dropdown .dropbtn {
+	   margin: margin: 0 0 0 0; font-size: 15px; display: block; padding:14px 16px; text-decoration: none; color: #FFFFFF; background-color: #5F6980; border: 1px solid #5F6980;
+	  }
+	  
+
+	/* Add a red background color to navbar links on hover */
+	.navbar a:hover, .dropdown:hover .dropbtn {
+	  background-color: #354263;;
+	}
+
+	/* Dropdown content (hidden by default) */
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: #f9f9f9;
+	  min-width: 160px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+
+	/* Links inside the dropdown */
+	.dropdown-content a {
+	  float: none;
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	/* Add a grey background color to dropdown links on hover */
+	.dropdown-content a:hover {
+	  background-color: #ddd;
+	}
+
+	/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}	
 		
 #container {
 	width: 90%;
@@ -43,15 +78,21 @@
 </head>
 
 <body>
-	
-	
-	
 	<div id="container">
 		<ul id="nav" style="margin-bottom: 10px;">
-		<li><a href='<?php echo site_url('')?>'>Home</a></li>
-		<li><a href='<?php echo site_url('main/cinema')?>'>MICE-OFF Cinemas</a></li>
-		<li><a href='<?php echo site_url('main/film')?>'>MICE-OFF Films</a></li>
+		<li><a href='<?php echo site_url('')?>'>Navigate Home</a></li>
 		
+		
+		<li><div class="dropdown">
+				<button class="dropbtn">Information 
+				<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="<?php echo site_url('main/cinema')?>">List festival cinemas</a>
+					<a href="<?php echo site_url('main/film')?>">List festival films</a>
+					<!-- <a href="#">Link 3</a> -->
+				</div></li>
+			</div>
 		
 		
 			<ul id="rightnav">
@@ -60,15 +101,6 @@
 			<li><a href='<?php echo site_url('main/querynav')?>'>System Information</a></li>
 			<li><a href='<?php echo site_url('main/booking')?>'>Current Bookings</a></li>
 			</ul>
-			
-				<ul id="drop-nav">
-				<li><a href="#">Views</a>
-				<ul>
-				<li><a href="#">Performances</a></li>
-				<li><a href="#">Film</a></li>
-				</ul>
-				</li>
-				</ul>
 		</ul>
 	</div>
 	
