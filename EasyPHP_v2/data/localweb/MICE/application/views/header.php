@@ -90,6 +90,7 @@
 				<div class="dropdown-content">
 					<a href="<?php echo site_url('main/cinema')?>">List festival cinemas</a>
 					<a href="<?php echo site_url('main/film')?>">List festival films</a>
+					<a href="<?php echo site_url('main/performances')?>">Performances</a>
 					<!-- <a href="#">Link 3</a> -->
 				</div> </div></li>
 			

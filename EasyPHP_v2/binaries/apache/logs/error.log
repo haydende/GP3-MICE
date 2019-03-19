@@ -848,3 +848,23 @@
 [Tue Mar 19 13:50:21.836795 2019] [mpm_winnt:notice] [pid 13796:tid 756] AH00422: Parent: Received shutdown signal -- Shutting down the server.
 [Tue Mar 19 13:50:23.839831 2019] [mpm_winnt:notice] [pid 14172:tid 788] AH00364: Child: All worker threads have exited.
 [Tue Mar 19 13:50:23.869821 2019] [mpm_winnt:notice] [pid 13796:tid 756] AH00430: Parent: Child process 14172 exited successfully.
+[Tue Mar 19 14:55:19.589783 2019] [mpm_winnt:notice] [pid 13104:tid 616] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Tue Mar 19 14:55:19.590783 2019] [mpm_winnt:notice] [pid 13104:tid 616] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Tue Mar 19 14:55:19.590783 2019] [core:notice] [pid 13104:tid 616] AH00094: Command line: 'C:\\Users\\Jason\\DOCUME~1\\GitHub\\GP3-MICE\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Jason/Documents/GitHub/GP3-MICE/EasyPHP_v2/binaries/apache'
+[Tue Mar 19 14:55:19.601779 2019] [mpm_winnt:notice] [pid 13104:tid 616] AH00418: Parent: Created child process 9984
+[Tue Mar 19 14:55:22.028233 2019] [mpm_winnt:notice] [pid 13104:tid 616] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Mar 19 14:55:22.030233 2019] [mpm_winnt:notice] [pid 9984:tid 888] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 19 14:55:22.064222 2019] [mpm_winnt:error] [pid 9984:tid 1180] (OS 10038)An operation was attempted on something that is not a socket.  : AH00332: winnt_accept: getsockname error on listening socket, is IPv6 available?
+[Tue Mar 19 14:55:24.065942 2019] [mpm_winnt:notice] [pid 9984:tid 888] AH00364: Child: All worker threads have exited.
+[Tue Mar 19 14:55:24.090934 2019] [mpm_winnt:notice] [pid 13104:tid 616] AH00430: Parent: Child process 9984 exited successfully.
+[Tue Mar 19 14:55:29.350416 2019] [mpm_winnt:notice] [pid 13512:tid 672] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Tue Mar 19 14:55:29.350416 2019] [mpm_winnt:notice] [pid 13512:tid 672] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Tue Mar 19 14:55:29.350416 2019] [core:notice] [pid 13512:tid 672] AH00094: Command line: 'C:\\Users\\Jason\\DOCUME~1\\GitHub\\GP3-MICE\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Jason/Documents/GitHub/GP3-MICE/EasyPHP_v2/binaries/apache'
+[Tue Mar 19 14:55:29.362412 2019] [mpm_winnt:notice] [pid 13512:tid 672] AH00418: Parent: Created child process 8812
+[Tue Mar 19 14:55:31.775266 2019] [mpm_winnt:notice] [pid 8812:tid 576] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 19 15:08:06.060879 2019] [:error] [pid 8812:tid 1180] [client 127.0.0.1:59120] PHP Fatal error:  Cannot redeclare Main::Cinema_output() in C:\\Users\\Jason\\Documents\\GitHub\\GP3-MICE\\EasyPHP_v2\\data\\localweb\\MICE\\application\\controllers\\main.php on line 86, referer: http://localhost:8080/
+[Tue Mar 19 15:22:10.056201 2019] [:error] [pid 8812:tid 1156] [client 127.0.0.1:59452] PHP Parse error:  syntax error, unexpected 'cinema' (T_STRING) in C:\\Users\\Jason\\Documents\\GitHub\\GP3-MICE\\EasyPHP_v2\\data\\localweb\\MICE\\application\\controllers\\main.php on line 73, referer: http://localhost:8080/
+[Tue Mar 19 15:28:56.481924 2019] [:error] [pid 8812:tid 1156] [client 127.0.0.1:59629] PHP Parse error:  syntax error, unexpected ',' in C:\\Users\\Jason\\Documents\\GitHub\\GP3-MICE\\EasyPHP_v2\\data\\localweb\\MICE\\application\\controllers\\main.php on line 71, referer: http://localhost:8080/MICE/
+[Tue Mar 19 15:36:37.385307 2019] [mpm_winnt:notice] [pid 13512:tid 672] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Mar 19 15:36:39.389681 2019] [mpm_winnt:notice] [pid 8812:tid 576] AH00364: Child: All worker threads have exited.
+[Tue Mar 19 15:36:39.461658 2019] [mpm_winnt:notice] [pid 13512:tid 672] AH00430: Parent: Child process 8812 exited successfully.

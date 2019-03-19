@@ -54,6 +54,53 @@ class Main extends CI_Controller {
 		$this->load->view('cinema_view.php', $output);
 	}
 	
+	public function performances()
+	{	
+		$this->load->view('header');
+		$crud = new grocery_CRUD();
+		$crud->set_theme('datatables');
+		
+		//table name exact from database
+		$crud->set_table('performance');
+		
+		//give focus on name used for operations e.g. Add Order, Delete Order
+		$crud->set_subject('Performance');
+		
+		$crud->columns('Film_ID', 'Cinema_ID', 'Screen_ID', 'Date', 'Time', 'Remaining_seats');
+	
+		//the fields function lists attributes to see on add/edit forms.
+		//Note no inclusion of Cinema_ID as this is auto-incrementing
+		$crud->fields('Performance_ID', 'Date', 'Time', 'Screen_ID', 'Cinema_ID', 'Film_ID', 'Remaining_seats');
+		
+		//form validation (could match database columns set to "not null")
+		$crud->required_fields('Performance_ID', 'Date', 'Time', 'Screen_ID', 'Cinema_ID', 'Film_ID', 'Remaining_seats');
+		
+		$crud->set_relation('Cinema_ID', 'cinema', 'Cinema_Name');
+		$crud->set_relation('Film_ID', 'film', 'Title');
+		
+		//form validation (could match database columns set to "not null")
+		$crud->required_fields('Performance_ID', 'Date', 'Time', 'Screen_ID', 'Cinema_ID', 'Film_ID', 'Remaining_seats');
+		
+		//change column heading name for readability ('columm name', 'name to display in frontend column header')
+		$crud->display_as('Performance_ID', 'Performance Number'); 
+		$crud->display_as('Date', 'Date of performance');
+		$crud->display_as('Time', 'Time of performance');
+		$crud->display_as('Screen_ID', 'Screen Number');
+		$crud->display_as('Cinema_ID', 'Cinema Name');
+		$crud->display_as('Film_ID', 'Film Name');
+		$crud->display_as('Remaining Seats', 'Number of seats remaining');
+		
+		
+		$output = $crud->render();
+		$this->performance_output($output);
+	}
+	
+	function performance_output($output = null)
+	{
+		//this function links up to corresponding page in the views folder to display content for this table
+		$this->load->view('performance_view.php', $output);
+	}
+	
 	
 		public function film()
 	{	
@@ -66,7 +113,7 @@ class Main extends CI_Controller {
 		
 		//give focus on name used for operations e.g. Add Order, Delete Order
 		$crud->set_subject('Film');
-			
+		
 		//the fields function lists attributes to see on add/edit forms.
 		//Note no inclusion of Cinema_ID as this is auto-incrementing
 		$crud->fields('Title', 'Director_ID', 'Year_Release');
