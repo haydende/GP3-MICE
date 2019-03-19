@@ -840,3 +840,11 @@
 [Tue Mar 19 13:33:32.219848 2019] [mpm_winnt:notice] [pid 6088:tid 552] AH00422: Parent: Received shutdown signal -- Shutting down the server.
 [Tue Mar 19 13:33:34.221463 2019] [mpm_winnt:notice] [pid 11308:tid 648] AH00364: Child: All worker threads have exited.
 [Tue Mar 19 13:33:34.245451 2019] [mpm_winnt:notice] [pid 6088:tid 552] AH00430: Parent: Child process 11308 exited successfully.
+[Tue Mar 19 13:46:37.845065 2019] [mpm_winnt:notice] [pid 13796:tid 756] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Tue Mar 19 13:46:37.845065 2019] [mpm_winnt:notice] [pid 13796:tid 756] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Tue Mar 19 13:46:37.845065 2019] [core:notice] [pid 13796:tid 756] AH00094: Command line: 'C:\\Users\\Jason\\DOCUME~1\\GitHub\\GP3-MICE\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Jason/Documents/GitHub/GP3-MICE/EasyPHP_v2/binaries/apache'
+[Tue Mar 19 13:46:37.860060 2019] [mpm_winnt:notice] [pid 13796:tid 756] AH00418: Parent: Created child process 14172
+[Tue Mar 19 13:46:39.065113 2019] [mpm_winnt:notice] [pid 14172:tid 788] AH00354: Child: Starting 64 worker threads.
+[Tue Mar 19 13:50:21.836795 2019] [mpm_winnt:notice] [pid 13796:tid 756] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Mar 19 13:50:23.839831 2019] [mpm_winnt:notice] [pid 14172:tid 788] AH00364: Child: All worker threads have exited.
+[Tue Mar 19 13:50:23.869821 2019] [mpm_winnt:notice] [pid 13796:tid 756] AH00430: Parent: Child process 14172 exited successfully.
