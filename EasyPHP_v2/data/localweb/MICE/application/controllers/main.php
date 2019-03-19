@@ -53,6 +53,44 @@ class Main extends CI_Controller {
 		//this function links up to corresponding page in the views folder to display content for this table
 		$this->load->view('cinema_view.php', $output);
 	}
+	
+	
+		public function film()
+	{	
+		$this->load->view('header');
+		$crud = new grocery_CRUD();
+		$crud->set_theme('datatables');
+		
+		//table name exact from database
+		$crud->set_table('film');
+		
+		//give focus on name used for operations e.g. Add Order, Delete Order
+		$crud->set_subject('Film');
+			
+		//the fields function lists attributes to see on add/edit forms.
+		//Note no inclusion of Cinema_ID as this is auto-incrementing
+		$crud->fields('Title', 'Director_ID', 'Year_Release');
+		
+		$crud->set_relation('Director_ID', 'Director', 'Name');
+		
+		//form validation (could match database columns set to "not null")
+		$crud->required_fields('Title', 'Director_ID', 'Year_Release', 'Cinema_Manager');
+		
+		//change column heading name for readability ('columm name', 'name to display in frontend column header')
+		$crud->display_as('Film_ID', 'Film Number');
+		$crud->display_as('Title', 'Film Name');
+		$crud->display_as('Director_ID', 'Director Name');
+		
+		
+		$output = $crud->render();
+		$this->film_output($output);
+	}
+	
+	function film_output($output = null)
+	{
+		//this function links up to corresponding page in the views folder to display content for this table
+		$this->load->view('film_view.php', $output);
+	}
 
 
 	public function booking()
@@ -63,6 +101,7 @@ class Main extends CI_Controller {
 		$crud->set_table('booking');
 		$crud->set_subject('booking');
 		$crud->fields('Booking_ID', 'No_seats', 'Member_ID', 'Performance_ID', 'Film_ID');
+		$crud->set_relation('Film_ID', 'Film', 'Title');
 		$crud->required_fields('Booking_ID', 'No_seats', 'Member_ID', 'Performance_ID', 'Film_ID');
 		$crud->display_as('Booking_ID', 'Booking Number');
 		$crud->display_as('No_seats', 'Number of seats');

@@ -37,11 +37,15 @@
 		<ul id="nav" style="margin-bottom: 10px;">
 		<li><a href='<?php echo site_url('')?>'>Home</a></li>
 		<li><a href='<?php echo site_url('main/cinema')?>'>MICE-OFF Cinemas</a></li>
-		<li><a href='<?php echo site_url('main/booking')?>'>Current Bookings</a></li>
+		<li><a href='<?php echo site_url('main/film')?>'>MICE-OFF Films</a></li>
+		
+		
+		
 			<ul id="rightnav">
 			
-			<li><a href='<?php echo site_url('main/login_view')?>'>Login/Register</a></li>
+			<li><a href='<?php echo site_url('main/login_view')?>'>Login</a></li>
 			<li><a href='<?php echo site_url('main/querynav')?>'>System Information</a></li>
+			<li><a href='<?php echo site_url('main/booking')?>'>Current Bookings</a></li>
 			</ul>
 		</ul>
 	</div>
