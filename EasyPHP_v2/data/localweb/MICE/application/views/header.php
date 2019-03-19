@@ -14,7 +14,7 @@
 	#nav li a:hover {background-color: #354263;}
 	#nav a:link, a:visited {border-radius: 0px 0px 0px 0px; }	
 	
-		/* The dropdown container */
+	/* The dropdown container */
 	.dropdown {
 	  float: left;
 	  overflow: hidden;
@@ -91,15 +91,11 @@
 					<a href="<?php echo site_url('main/cinema')?>">List festival cinemas</a>
 					<a href="<?php echo site_url('main/film')?>">List festival films</a>
 					<!-- <a href="#">Link 3</a> -->
-				</div></li>
-			</div>
-		
-		
-			<ul id="rightnav">
+				</div> </div></li>
 			
+			<ul id="rightnav">
 			<li><a href='<?php echo site_url('main/login_view')?>'>Login</a></li>
 			<li><a href='<?php echo site_url('main/querynav')?>'>System Information</a></li>
-			<li><a href='<?php echo site_url('main/booking')?>'>Current Bookings</a></li>
 			</ul>
 		</ul>
 	</div>
