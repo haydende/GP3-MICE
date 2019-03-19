@@ -28,6 +28,8 @@ body {
 	background-color: #FFFFFF;
 	padding-top: 0px;
 	margin-top: 5px;
+	z-index: -999;
+    
 }
 
 .mySlides {display:none;}

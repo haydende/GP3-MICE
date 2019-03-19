@@ -13,6 +13,18 @@
 	#nav li a { margin: 0 0 0 0; font-size: 15px; display: block; padding:14px 16px; text-decoration: none; color: #FFFFFF; background-color: #5F6980; border: 1px solid #5F6980;}
 	#nav li a:hover {background-color: #354263;}
 	#nav a:link, a:visited {border-radius: 0px 0px 0px 0px; }	
+	
+	ul {list-style: none;padding: 0px;margin: 0px;}
+	ul li {display: block;position: relative;float: left;border: none}
+	li ul {display: none;}
+	ul li a {display: block;background: #000;padding: 5px 10px 5px 10px;text-decoration: none;
+			   white-space: nowrap;color: #fff;}
+	ul li a:hover {background: #f00;}
+	li:hover ul {display: block; position: absolute;}
+	li:hover li {float: none;}
+	li:hover a {background: #f00;}
+	li:hover li a:hover {background: #000;}
+	#drop-nav li ul li {border-top: 0px;}
 		
 #container {
 	width: 90%;
@@ -20,9 +32,10 @@
 	margin-right: auto;
 	padding-bottom: 50px;
 	background-color: #D5D5D5;
-	
-	
+	z-index: 100;
 }	
+
+
 		
 		
 		
@@ -47,6 +60,15 @@
 			<li><a href='<?php echo site_url('main/querynav')?>'>System Information</a></li>
 			<li><a href='<?php echo site_url('main/booking')?>'>Current Bookings</a></li>
 			</ul>
+			
+				<ul id="drop-nav">
+				<li><a href="#">Views</a>
+				<ul>
+				<li><a href="#">Performances</a></li>
+				<li><a href="#">Film</a></li>
+				</ul>
+				</li>
+				</ul>
 		</ul>
 	</div>
 	
