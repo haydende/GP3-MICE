@@ -34,7 +34,7 @@
 		 <input style="height:24px" type="submit" id = "submitbutton" name="submitbutton">
       </form>
 	  <br>
-   </body> 
+</body> 
 
 <?php
 	if(isset($_POST['cinemaname']) || isset($_POST['cinema_location'])){

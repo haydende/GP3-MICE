@@ -11,8 +11,25 @@
 </head>
 <body>
 
-<h2>Current MICE members</h2>
+<h1>Queries</h1>
 <div align='center'>
+	<button type="submit" onclick="location.href='<?php echo site_url('main/querynav')?>'">Back to queries</button>
+</div>
+
+<h2>List of current MICE members</h2>
+<div align='center'
+<body>
+      <form method="POST" action = "<?php $_PHP_SELF ?>">
+	  <br>
+         <input type = "text" name = "ID" placeholder = "Member ID" />
+         <input type = "text" name = "title" placeholder = "Title" />
+		 <input type = "text" name = "name" placeholder = "Name" />
+		 <input type = "text" name = "join_date" placeholder = "Date Joined" />
+		 <input type = "text" name = "status" placeholder = "Membership Status" />
+		 <input style="height:24px" type="submit" id = "submitbutton" name="submitbutton">
+      </form>
+	  <br>
+</body> 
 <?php
 	$tmpl = array ('table_open' => '<table class="mytable">');
 	$this->table->set_template($tmpl); 
@@ -24,10 +41,6 @@
 	$query = $this->db->query('select * from temp;');
 	echo $this->table->generate($query);
 ?>
-</div>
-
-<div align='center'>
-	<button type="submit" onclick="location.href='<?php echo site_url('main/querynav')?>'">Back to queries</button>
 </div>
 
 </body>
