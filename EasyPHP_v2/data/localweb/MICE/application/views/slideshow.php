@@ -22,13 +22,13 @@ body {
 		#reel { display: block; padding-top: 40px; margin-left: auto; margin-right: auto; border: bold }	
 		
 #container {
-	width: 90%;
-	margin-left: auto;
+	width: 100%;
+	height: 100%;
+	margin-left: 50px;
 	margin-right: auto;
 	background-color: #FFFFFF;
 	padding-top: 0px;
 	margin-top: 5px;
-	z-index: -999;
     
 }
 
@@ -50,9 +50,9 @@ body {
 	<div id="container">
 		
 <div class="w3-content w3-display-container" style="max-width:100%">
-  <img class="mySlides" src="assets/images/image1.jpg" style="width:100%">
-  <img class="mySlides" src="assets/images/image2.jpg" style="width:100%">
-  <img class="mySlides" src="assets/images/image3.jpg" style="width:100%">
+  <img class="mySlides" src="assets/images/Casablanca-Rebecca-Rope.png" style="width:100%">
+  <img class="mySlides" src="assets/images/The Maltese Falcon.jpg" style="width:100%">
+  <img class="mySlides" src="assets/images/Casablanca Still.jpg" style="width:100%">
 
   <button class="w3-button w3-white w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-white w3-display-right" onclick="plusDivs(1)">&#10095;</button>
