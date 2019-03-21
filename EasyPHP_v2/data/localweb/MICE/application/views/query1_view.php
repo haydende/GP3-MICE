@@ -37,7 +37,7 @@
 </body> 
 
 <?php
-	if(isset($_POST['cinemaname']) || isset($_POST['cinema_location']) || isset($_POST['cinema_address']) || isset($_POST['cinema_manager'])){
+if(isset($_POST['cinemaname']) || isset($_POST['cinema_location']) || isset($_POST['cinema_address']) || isset($_POST['cinema_manager'])){
 	
 	$cinema_name = "1";
 	$cinema_location = "1";
@@ -61,44 +61,59 @@
 	$this->table->set_template($tmpl); 
 	
 	// if a temp table currently exists, drop it so we can create a new one.
-	$this->db->query('drop table if exists temp');
+	$this->db->query('DROP TABLE IF EXISTS temp');
 	
 	//Create a temp table and specify required columns. 
 	
 	// create string containing SQL statement (used with following print for debugging)
-	$sql_query = 'create temporary table temp as (SELECT Cinema_ID, Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager 
+	$sql_query = 'CREATE TEMPORARY TABLE temp AS (SELECT Cinema_ID, 
+															 Cinema_Name,
+															 Cinema_Location,
+															 Cinema_Address, 
+															 Cinema_Manager 
 													  FROM cinema 
-													  WHERE ' .$cinema_name. ' AND ' .$cinema_location. ' AND ' .$cinema_address. ' AND ' .$cinema_manager. ')';
+													  WHERE ' .$cinema_name. ' AND '
+															  .$cinema_location. ' AND ' 
+															  .$cinema_address. ' AND ' 
+															  .$cinema_manager. ')';
 	
 	//print the SQL statement (for debugging)	  
 	// print $sql_query;
 
-	$this->db->query('create temporary table temp as (SELECT Cinema_ID, Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager 
-													  FROM cinema 
-													  WHERE ' .$cinema_name. ' AND ' .$cinema_location. ' AND ' .$cinema_address. ' AND ' .$cinema_manager. ')');
+	$this->db->query($sql_query);
+
+} else {
 	
-	//Present all in the temp table with a SQL select all command. 
-	$query = $this->db->query('SELECT Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager 
-							   FROM temp');
-	
-	echo $this->table->generate($query);
-	}   
-	
-	else{
 	$tmpl = array ('table_open' => '<table class="mytable">');
 	$this->table->set_template($tmpl); 
 	
 	// if a temp table currently exists, drop it so we can create a new one.
-	$this->db->query('drop table if exists temp');
+	$this->db->query('DROP TABLE IF EXISTS temp');
+	
+	$sql_query = 'CREATE TEMPORARY TABLE temp AS (SELECT Cinema_ID, 
+															 Cinema_Name,
+															 Cinema_Location, 
+															 Cinema_Address, 
+															 Cinema_Manager 
+												  FROM cinema)';
+	
+	//Prints the SQL statement for the temporary table
+	//print $sql_query;
 	
 	//Create a temp table and specify required columns. 
-	$this->db->query('create temporary table temp as (select Cinema_ID, Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager FROM cinema)');
-	
-	//Present all in the temp table with a SQL select all command. 
-	$query = $this->db->query('select Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager from temp');
-	
-	echo $this->table->generate($query);
-	}
+	$this->db->query($sql_query);
+
+}
+
+// Present all data within temp table using SELECT all command
+$query = $this->db->query('SELECT Cinema_Name AS \'Name of Cinema\',
+									  Cinema_Location AS \'Location\', 
+									  Cinema_Address AS \'Address\', 
+									  Cinema_Manager AS \'Manager\'
+						   FROM temp');
+
+// Generate the table in the view
+echo $this->table->generate($query);
 	
 ?>
 </div>
