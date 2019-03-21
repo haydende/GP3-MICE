@@ -31,13 +31,21 @@
 	  <br>
 </body> 
 <?php
+if (isset($_POST['ID']) || isset($_POST['title']) || isset($_POST['name']) || isset($_POST['join_date']) || isset($_POST['status'])) {
+	
+	$memberID = "1";
+	$title = "1";
+	$name = "1";
+	$join_date = "1";
+	$status = "1";
+	
 	$tmpl = array ('table_open' => '<table class="mytable">');
 	$this->table->set_template($tmpl); 
 	
 	$this->db->query('drop table if exists temp');
 	$this->db->query('create temporary table temp as (SELECT m.Member_ID, t.Title, m.MemberName, m.Date_Join, s.Status 
-					  FROM member m, title t, status s 
-					  WHERE m.Title_ID = t.Title_ID AND m.Status_ID = s.Status_ID )');
+													  FROM member m, title t, status s 
+													  WHERE m.Title_ID = t.Title_ID AND m.Status_ID = s.Status_ID )');
 	$query = $this->db->query('select * from temp;');
 	echo $this->table->generate($query);
 ?>
