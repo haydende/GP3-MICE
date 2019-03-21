@@ -37,9 +37,26 @@
 </body> 
 
 <?php
-	if(isset($_POST['cinemaname']) || isset($_POST['cinema_location'])){
-	$varname = $_POST["cinemaname"];
-	$varname2 = $_POST["cinema_location"];
+	if(isset($_POST['cinemaname']) || isset($_POST['cinema_location']) || isset($_POST['cinema_address']) || isset($_POST['cinema_manager'])){
+	
+	$cinema_name = "1";
+	$cinema_location = "1";
+	$cinema_address = "1";
+	$cinema_manager = "1";
+	
+	if ($_POST['cinemaname'] != "") {
+		$cinema_name = "Cinema_Name = \"" .$_POST['cinemaname']. "\"";
+	}
+	if ($_POST['cinema_location'] != "") {
+		$cinema_location = "Cinema_Location = \"" .$_POST['cinema_location']. "\"";
+	}
+	if ($_POST['cinema_address'] != "") {
+		$cinema_address = "Cinema_Address = \"" .$_POST['cinema_address']. "\"";
+	}
+	if ($_POST['cinema_manager'] != "") {
+		$cinema_manager = "Cinema_Manager = \"" .$_POST['cinema_manager']. "\"";
+	}
+	
 	$tmpl = array ('table_open' => '<table class="mytable">');
 	$this->table->set_template($tmpl); 
 	
@@ -47,10 +64,22 @@
 	$this->db->query('drop table if exists temp');
 	
 	//Create a temp table and specify required columns. 
-	$this->db->query('create temporary table temp as (select Cinema_ID, Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager FROM cinema WHERE Cinema_Name = "' .$varname. '" OR Cinema_Location = "' .$varname2. '")');
+	
+	// create string containing SQL statement (used with following print for debugging)
+	$sql_query = 'create temporary table temp as (SELECT Cinema_ID, Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager 
+													  FROM cinema 
+													  WHERE ' .$cinema_name. ' AND ' .$cinema_location. ' AND ' .$cinema_address. ' AND ' .$cinema_manager. ')';
+	
+	//print the SQL statement (for debugging)	  
+	// print $sql_query;
+
+	$this->db->query('create temporary table temp as (SELECT Cinema_ID, Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager 
+													  FROM cinema 
+													  WHERE ' .$cinema_name. ' AND ' .$cinema_location. ' AND ' .$cinema_address. ' AND ' .$cinema_manager. ')');
 	
 	//Present all in the temp table with a SQL select all command. 
-	$query = $this->db->query('select Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager from temp');
+	$query = $this->db->query('SELECT Cinema_Name, Cinema_Location, Cinema_Address, Cinema_Manager 
+							   FROM temp');
 	
 	echo $this->table->generate($query);
 	}   
