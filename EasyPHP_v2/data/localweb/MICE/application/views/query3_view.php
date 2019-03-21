@@ -25,6 +25,8 @@
 
 
 <div align='center'
+
+<!-- INPUT FORMS TO TAKE USER INPUT TO BE USED IN DATABASE QUERIES -->
 <body>
       <form method="POST" action = "<?php $_PHP_SELF ?>">
 	  <br>
@@ -33,12 +35,12 @@
 		 <input type = "text" name = "screen_number" placeholder = "Screen Number" />
 		 <input type = "text" name = "date" placeholder = "Performance Date" />
 		 <input type = "text" name = "time" placeholder = "Performance Time" />
-		 <input type = "text" name = "seats" placeholder = "Remaining Seats" />
 		 <input style="height:24px" type="submit" id = "submitbutton" name="submitbutton">
       </form>
 	  <br>
 </body> 
 
+<!-- DATABASE QUERY SECTION -->
 <?php
 	if(isset($_POST['cinema_name']) || isset($_POST['film_name']) || isset($_POST['screen_number']) || isset($_POST['date']) || isset($_POST['time']) || isset($_POST['seats']) ){
 	
@@ -49,6 +51,7 @@
 	$time = "1";
 	$seats = "1";
 	
+	// IF STATEMENTS TO CHECK IF FORMS HAVE BEEN FILLED BY USER AND SUBMITTED. 
 	if ($_POST['cinema_name'] != "") {
 		$cinema_name = "Cinema_Name = \"" .$_POST['cinema_name']. "\"";
 	}
@@ -97,6 +100,8 @@
 	echo $this->table->generate($query);
 	}   
 	
+	
+	// IF NONE OF THE FORM INPUT FIELDS HAVE BEEN SUBMITTED, DEFAULT TABLE IS DISPLAYED. 
 	else{
 	$tmpl = array ('table_open' => '<table class="mytable">');
 	$this->table->set_template($tmpl); 

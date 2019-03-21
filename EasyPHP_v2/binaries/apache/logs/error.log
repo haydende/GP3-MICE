@@ -868,3 +868,20 @@
 [Tue Mar 19 15:36:37.385307 2019] [mpm_winnt:notice] [pid 13512:tid 672] AH00422: Parent: Received shutdown signal -- Shutting down the server.
 [Tue Mar 19 15:36:39.389681 2019] [mpm_winnt:notice] [pid 8812:tid 576] AH00364: Child: All worker threads have exited.
 [Tue Mar 19 15:36:39.461658 2019] [mpm_winnt:notice] [pid 13512:tid 672] AH00430: Parent: Child process 8812 exited successfully.
+[Thu Mar 21 18:37:36.846646 2019] [mpm_winnt:notice] [pid 2632:tid 824] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Thu Mar 21 18:37:36.846646 2019] [mpm_winnt:notice] [pid 2632:tid 824] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Thu Mar 21 18:37:36.846646 2019] [core:notice] [pid 2632:tid 824] AH00094: Command line: 'C:\\Users\\Jason\\DOCUME~1\\GitHub\\GP3-MICE\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Jason/Documents/GitHub/GP3-MICE/EasyPHP_v2/binaries/apache'
+[Thu Mar 21 18:37:36.857642 2019] [mpm_winnt:notice] [pid 2632:tid 824] AH00418: Parent: Created child process 3388
+[Thu Mar 21 18:37:38.343168 2019] [mpm_winnt:notice] [pid 3388:tid 672] AH00354: Child: Starting 64 worker threads.
+[Thu Mar 21 18:47:31.695280 2019] [mpm_winnt:notice] [pid 2632:tid 824] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Mar 21 18:47:33.697286 2019] [mpm_winnt:notice] [pid 3388:tid 672] AH00364: Child: All worker threads have exited.
+[Thu Mar 21 18:47:33.732290 2019] [mpm_winnt:notice] [pid 2632:tid 824] AH00430: Parent: Child process 3388 exited successfully.
+[Thu Mar 21 18:47:36.541972 2019] [mpm_winnt:notice] [pid 9148:tid 600] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Thu Mar 21 18:47:36.541972 2019] [mpm_winnt:notice] [pid 9148:tid 600] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Thu Mar 21 18:47:36.541972 2019] [core:notice] [pid 9148:tid 600] AH00094: Command line: 'C:\\Users\\Jason\\DOCUME~1\\GitHub\\GP3-MICE\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Users/Jason/Documents/GitHub/GP3-MICE/EasyPHP_v2/binaries/apache'
+[Thu Mar 21 18:47:36.551968 2019] [mpm_winnt:notice] [pid 9148:tid 600] AH00418: Parent: Created child process 9796
+[Thu Mar 21 18:47:37.741590 2019] [mpm_winnt:notice] [pid 9796:tid 672] AH00354: Child: Starting 64 worker threads.
+[Thu Mar 21 20:18:01.125492 2019] [:error] [pid 9796:tid 1168] [client 127.0.0.1:56531] PHP Parse error:  syntax error, unexpected '}' in C:\\Users\\Jason\\Documents\\GitHub\\GP3-MICE\\EasyPHP_v2\\data\\localweb\\MICE\\application\\views\\make_booking_view.php on line 46, referer: http://localhost:8080/MICE/index.php
+[Thu Mar 21 21:44:19.848407 2019] [mpm_winnt:notice] [pid 9148:tid 600] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Mar 21 21:44:21.851953 2019] [mpm_winnt:notice] [pid 9796:tid 672] AH00364: Child: All worker threads have exited.
+[Thu Mar 21 21:44:21.896965 2019] [mpm_winnt:notice] [pid 9148:tid 600] AH00430: Parent: Child process 9796 exited successfully.

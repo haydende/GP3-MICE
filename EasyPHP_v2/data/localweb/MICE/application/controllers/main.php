@@ -165,6 +165,12 @@ class Main extends CI_Controller {
 		$this->load->view('booking_view.php', $output);
 	}
 	
+	public function make_booking()
+	{	
+		$this->load->view('header');
+		$this->load->view('make_booking_view');
+	}
+	
 	public function querynav()
 	{	
 		$this->load->view('header');
@@ -195,11 +201,7 @@ class Main extends CI_Controller {
 		$this->load->view('query3_view');
 	}
 	
-	public function blank()
-	{	
-		$this->load->view('header');
-		$this->load->view('blank_view');
-	}
+	
 }
 
 
