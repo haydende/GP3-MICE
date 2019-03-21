@@ -189,6 +189,12 @@ class Main extends CI_Controller {
 		$this->load->view('query2_view');
 	}
 	
+	public function query3()
+	{	
+		$this->load->view('header');
+		$this->load->view('query3_view');
+	}
+	
 	public function blank()
 	{	
 		$this->load->view('header');

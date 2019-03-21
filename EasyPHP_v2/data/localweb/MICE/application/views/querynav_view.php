@@ -46,6 +46,7 @@ body {
 	<select name='Queries'>
 	  <option type="submit" onclick="location.href='<?php echo site_url('main/query1')?>'">List all current MICE cinemas</option>
 	  <option type="submit" onclick="location.href='<?php echo site_url('main/query2')?>'">List all current MICE members</option>
+	  <option type="submit" onclick="location.href='<?php echo site_url('main/query3')?>'">List performances</option>
 	</select> 
 </div>
 	
