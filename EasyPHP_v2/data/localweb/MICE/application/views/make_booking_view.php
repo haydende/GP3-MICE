@@ -21,10 +21,10 @@
 		  <form method="POST" action = "<?php $_PHP_SELF ?>">
 		  <br><br><br><br><br><br><br><br><br><br><br><br>
 			<h4>Please input booking details</h4>
-			 <input type ="text" size="25" name="Performance_ID" placeholder = "Enter the performance number..." style="text-align: center;"" /> <br><br>
-			 <input type ="text" size="25" name="Seats" placeholder = "Enter the amount of seats..." style="text-align: center;"" /> <br><br>
-			 <input type ="text" size="25" name="Member_ID" placeholder = "Enter your Member ID..." style="text-align: center;"" /> <br><br>
-			 <input style="height:24px; width:207px" type="submit" id = "submitbutton" name="submitbutton" value="Make Booking"> <br><br>
+			 <input type ="text" size="40" name="Performance_ID" placeholder = "Enter the performance number..."/> <br><br>
+			 <input type ="text" size="40" name="Seats" placeholder = "Enter the number of seats..." /> <br><br>
+			 <input type ="text" size="40" name="Member_ID" placeholder = "Enter your Member ID..."  /> <br><br>
+			 <input style="height:24px; width:270px" type="submit" id = "submitbutton" name="submitbutton" value="Make Booking"> <br><br>
 		  </form>
 		  <br>
 	</body>
@@ -54,8 +54,10 @@
 			//print the SQL statement (for debugging)	  
 			// print $sql_query;
 
-			$this->db->query('INSERT INTO Bookings (No_seats, Member_ID, Performance_ID, Film_ID)
-							  VALUES (' .$Performance_ID. ', ' .$Seats. ', ' .$Member_ID ', (SELECT Film_ID FROM Performance WHERE Performance_ID = ' .$Performance_ID. '));');
+			$this->db->query('INSERT INTO Booking (No_seats, Member_ID, Performance_ID, Film_ID)
+							  VALUES (' .$Seats. ', ' .$Member_ID. ', ' .$Performance_ID. ', (SELECT Film_ID 
+																							  FROM Performance 
+																							  WHERE Performance_ID = ' .$Performance_ID. '));');
 			print "Your booking has been placed!";
 							  
 		} else {
