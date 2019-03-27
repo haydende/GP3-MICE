@@ -45,16 +45,16 @@ if(isset($_POST['cinemaname']) || isset($_POST['cinema_location']) || isset($_PO
 	$cinema_manager = "1";
 	
 	if ($_POST['cinemaname'] != "") {
-		$cinema_name = "Cinema_Name = \"" .$_POST['cinemaname']. "\"";
+		$cinema_name = "Cinema_Name LIKE '%" .$_POST['cinemaname']. "%'";
 	}
 	if ($_POST['cinema_location'] != "") {
-		$cinema_location = "Cinema_Location = \"" .$_POST['cinema_location']. "\"";
+		$cinema_location = "Cinema_Location LIKE '%" .$_POST['cinema_location']. "%'";
 	}
 	if ($_POST['cinema_address'] != "") {
-		$cinema_address = "Cinema_Address = \"" .$_POST['cinema_address']. "\"";
+		$cinema_address = "Cinema_Address LIKE '%" .$_POST['cinema_address']. "%'";
 	}
 	if ($_POST['cinema_manager'] != "") {
-		$cinema_manager = "Cinema_Manager = \"" .$_POST['cinema_manager']. "\"";
+		$cinema_manager = "Cinema_Manager LIKE '%" .$_POST['cinema_manager']. "%'";
 	}
 	
 	$tmpl = array ('table_open' => '<table class="mytable">');

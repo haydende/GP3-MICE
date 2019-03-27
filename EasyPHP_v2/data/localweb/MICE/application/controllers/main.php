@@ -54,6 +54,83 @@ class Main extends CI_Controller {
 		$this->load->view('cinema_view.php', $output);
 	}
 	
+	public function screen()
+	{	
+		$this->load->view('header');
+		$crud = new grocery_CRUD();
+		$crud->set_theme('datatables');
+		
+		//table name exact from database
+		$crud->set_table('screen');
+		
+		//give focus on name used for operations e.g. Add Order, Delete Order
+		$crud->set_subject('Screen');
+		
+		//the columns function lists attributes you see on frontend view of the table
+		$crud->columns( 'Screen_ID', 'Cinema_ID', 'No_Of_seats', 'Seat_Price');
+	
+		//the fields function lists attributes to see on add/edit forms.
+		//Note no inclusion of Cinema_ID as this is auto-incrementing
+		$crud->fields('Screen_ID', 'Cinema_ID', 'No_Of_seats', 'Seat_Price');
+		
+		$crud->set_relation('Cinema_ID', 'Cinema', 'Cinema_Name');
+		
+		//form validation (could match database columns set to "not null")
+		$crud->required_fields('Screen_ID', 'Cinema_ID', 'No_Of_seats', 'Seat_Price');
+		
+		//change column heading name for readability ('columm name', 'name to display in frontend column header')
+		$crud->display_as('Screen_ID', 'Screen');
+		$crud->display_as('Cinema_ID', 'Cinema');
+		$crud->display_as('No_Of_seats', 'Seats');
+		$crud->display_as('Seat_Price', 'Price');
+		
+		$output = $crud->render();
+		$this->screen_output($output);
+	}
+	
+	function screen_output($output = null)
+	{
+		//this function links up to corresponding page in the views folder to display content for this table
+		$this->load->view('screen_view.php', $output);
+	}
+	
+	public function Member()
+	{	
+		$this->load->view('header');
+		$crud = new grocery_CRUD();
+		$crud->set_theme('datatables');
+		
+		//table name exact from database
+		$crud->set_table('member');
+		
+		//give focus on name used for operations e.g. Add Order, Delete Order
+		$crud->set_subject('Member');
+		
+		//the columns function lists attributes you see on frontend view of the table
+		$crud->columns( 'Member_ID', 'Title_ID', 'MemberName', 'Date_Join', 'Status_ID');
+	
+		//the fields function lists attributes to see on add/edit forms.
+		//Note no inclusion of Member_ID as this is auto-incrementing
+		$crud->fields('Title_ID', 'MemberName', 'Date_Join', 'Status_ID');
+		
+		//form validation (could match database columns set to "not null")
+		$crud->required_fields('MemberName', 'Status_ID');
+		
+		$crud->set_relation('Title_ID', 'Title', 'Title');
+		$crud->set_relation('Status_ID', 'Status', 'Status');
+		
+		//change column heading name for readability ('columm name', 'name to display in frontend column header')
+		$crud->display_as('Title', 'Name', 'Date Joined', 'Membership Status');
+		
+		$output = $crud->render();
+		$this->member_output($output);
+	}
+	
+	function member_output($output = null)
+	{
+		//this function links up to corresponding page in the views folder to display content for this table
+		$this->load->view('member_view.php', $output);
+	}	
 	public function performances()
 	{	
 		$this->load->view('header');

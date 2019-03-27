@@ -23,7 +23,15 @@
 
 	/* Dropdown button */
 	.dropdown .dropbtn {
-	   margin: margin: 0 0 0 0; font-size: 15px; display: block; padding:14px 16px; text-decoration: none; color: #FFFFFF; background-color: #5F6980; border: 1px solid #5F6980; font-weight: bold
+	   margin: margin: 0 0 0 0; 
+	   font-size: 15px; 
+	   display: block; 
+	   padding:14px 16px; 
+	   text-decoration: none;
+	   color: #FFFFFF; 
+	   background-color: #5F6980; 
+	   border: 1px solid #5F6980; 
+	   font-weight: bold
 	  }
 	  
 
@@ -37,9 +45,9 @@
 	  display: none;
 	  position: absolute;
 	  background-color: #f9f9f9;
-	  min-width: 160px;
+	  min-width: auto;
 	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	  border: 2px solid black;
+	  border: 1px solid grey;
 	  z-index: 1;
 	}
 
@@ -52,7 +60,8 @@
 	  text-decoration: none;
 	  display: block;
 	  text-align: center;
-	  font-weight: bold
+	  font-weight: bold;
+	  border: 1px solid black;
 	}
 
 	/* Add a grey background color to dropdown links on hover */
@@ -69,7 +78,7 @@
 		width: 90%;
 		margin-left: auto;
 		margin-right: auto;
-		padding-bottom: 50px;
+		padding-bottom: 25px;
 		background-color: #D5D5D5;
 		z-index: 100;
 	}	
@@ -107,6 +116,8 @@
 					<a href="<?php echo site_url('main/cinema')?>">List festival cinemas</a>
 					<a href="<?php echo site_url('main/film')?>">List festival films</a>
 					<a href="<?php echo site_url('main/performances')?>">Performances</a>
+					<a href="<?php echo site_url('main/member')?>">Members</a>
+					<a href="<?php echo site_url('main/screen')?>">Screens</a>
 				</div> </div></li>
 			</ul>
 		</ul>

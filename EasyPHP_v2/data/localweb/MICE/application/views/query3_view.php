@@ -34,12 +34,24 @@
          <input type = "text" name = "film_name" placeholder = "Film Name" />
 		 <input type = "text" name = "screen_number" placeholder = "Screen Number" />
 		 <!--<input type = "text" name = "date" placeholder = "Performance Date" />-->
-		 <input type="date" name="date">
+		 <input type="date" name="date" style="height:18px">
 		 <input type = "text" name = "time" placeholder = "Performance Time" />
 		 <input style="height:24px" type="submit" id = "submitbutton" name="submitbutton">
       </form>
 	  <br>
 </body> 
+
+<style>
+	table {
+		foreground-color: #FFFFFF;
+		background-color: #EEEEEE;
+		text-align: center;
+	}
+	
+	table th {
+		background-color: #999999;
+	}
+</style>
 
 <!-- DATABASE QUERY SECTION -->
 <?php
@@ -77,7 +89,12 @@
 	$this->db->query('DROP TABLE IF EXISTS temp');
 	
 	//Create temporary table with specified field values
-	$this->db->query('CREATE TEMPORARY TABLE temp AS (SELECT c.Cinema_Name, f.Title AS \'Film Title\', p.Screen_ID AS \'Screen Number\', p.Date, p.Time, p.Remaining_seats 
+	$this->db->query('CREATE TEMPORARY TABLE temp AS (SELECT c.Cinema_Name AS \'Cinema\',
+															 f.Title AS \'Film Title\', 
+															 p.Screen_ID AS \'Screen Number\', 
+															 p.Date, 
+															 p.Time, 
+															 p.Remaining_seats AS \'Seats remaining\' 
 													  FROM performance p, film f, cinema c 
 													  WHERE f.Film_ID = p.Film_ID AND 
 														    c.Cinema_ID = p.Cinema_ID AND 
@@ -103,8 +120,15 @@
 	$this->db->query('drop table if exists temp');
 	
 	//Create a temp table and specify required columns. 
-	$this->db->query('create temporary table temp as (select c.Cinema_Name, f.Title AS \'Film Title\', p.Screen_ID AS \'Screen Number\', p.Date, p.Time,  
-													  p.Remaining_seats FROM performance p, film f, cinema c WHERE f.Film_ID = p.Film_ID AND c.Cinema_ID = p.Cinema_ID)');
+	$this->db->query('create temporary table temp as (select c.Cinema_Name AS \'Cinema\', 
+															 f.Title AS \'Film Title\', 
+															 p.Screen_ID AS \'Screen Number\', 
+															 p.Date, 
+															 p.Time, 
+															 p.Remaining_seats AS \'Seats Remaining\'
+													  FROM performance p, film f, cinema c 
+													  WHERE f.Film_ID = p.Film_ID AND
+															c.Cinema_ID = p.Cinema_ID)');
 	
 	//Present all in the temp table with a SQL select all command. 
 	$query = $this->db->query('select * from temp');
