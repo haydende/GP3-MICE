@@ -66,10 +66,10 @@
 	
 	// IF STATEMENTS TO CHECK IF FORMS HAVE BEEN FILLED BY USER AND SUBMITTED. 
 	if ($_POST['cinema_name'] != "") {
-		$cinema_name = "Cinema_Name = \"" .$_POST['cinema_name']. "\"";
+		$cinema_name = "Cinema_Name LIKE '%" .$_POST['cinema_name']. "%'";
 	}
 	if ($_POST['film_name'] != "") {
-		$film_name = "Title = \"" .$_POST['film_name']. "\"";
+		$film_name = "Title LIKE '%" .$_POST['film_name']. "%'";
 	}
 	if ($_POST['screen_number'] != "") {
 		$screen_number = "Screen_ID = \"" .$_POST['screen_number']. "\"";

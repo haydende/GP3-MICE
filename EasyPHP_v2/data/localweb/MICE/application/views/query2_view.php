@@ -16,46 +16,35 @@
 	<button type="submit" onclick="location.href='<?php echo site_url('main/querynav')?>'">Back to queries</button>
 </div>
 
-<h2>List of current MICE members</h2>
+<h2>List of all current festival films</h2>
 <div align='center'
 <body>
       <form method="POST" action = "<?php $_PHP_SELF ?>">
 	  <br>
-         <input type = "text" name = "ID" placeholder = "Member ID" />
-         <input type = "text" name = "title" placeholder = "Title" />
-		 <input type = "text" name = "name" placeholder = "Name" />
-		 <input type = "text" name = "join_date" placeholder = "Date Joined" />
-		 <input type = "text" name = "status" placeholder = "Membership Status" />
+         <input type = "text" name = "film_name" placeholder = "Film Name" />
+         <input type = "text" name = "director" placeholder = "Director Name" />
+		 <input type = "text" name = "year_released" placeholder = "Year Released" />
 		 <input style="height:24px" type="submit" id = "submitbutton" name="submitbutton">
       </form>
 	  <br>
 </body> 
 <?php
-if (isset($_POST['ID']) || isset($_POST['title']) || isset($_POST['name']) || isset($_POST['join_date']) || isset($_POST['status'])) {
+if (isset($_POST['film_name']) || isset($_POST['director']) || isset($_POST['year'])) {
 	
-	$memberID = "1";
-	$title = "1";
-	$name = "1";
-	$join_date = "1";
-	$status = "1";
+	$film_name = "1";
+	$director = "1";
+	$year_released = "1";
 	
-	if ($_POST['ID'] != "") {
-		$memberID = "m.Member_ID = \"" .$_POST['ID']. "\"";
+	if ($_POST['film_name'] != "") {
+		$film_name = "Title LIKE '%" .$_POST['film_name']. "%'";
 	}
-	if ($_POST['title'] != "") {
-		$title = "t.Title = \"" .$_POST['title']. "\"";
+	if ($_POST['director'] != "") {
+		$director = "d.Name LIKE '%" .$_POST['director']. "%'";
 	}
-	if ($_POST['name'] != "") {
-		$name = "m.MemberName = \"" .$_POST['name']. "\"";
+	if ($_POST['year_released'] != "") {
+		$year_released = "Year_Release LIKE '%" .$_POST['year_released']. "%'";
 	}
-	if ($_POST['join_date'] != "") {
-		$join_date = "m.Date_Join = \"" .$_POST['join_date']. "\"";
-	}
-	if ($_POST['status'] != "") {
-		$status = "s.Status = \"" .$_POST['status']. "\"";
-	}
-	
-	
+
 	$tmpl = array ('table_open' => '<table class="mytable">');
 	$this->table->set_template($tmpl); 
 	
@@ -65,20 +54,15 @@ if (isset($_POST['ID']) || isset($_POST['title']) || isset($_POST['name']) || is
 	//Create a temp table and specify required columns. 
 	
 	// create string containing SQL statement (used with following print for debugging)
-	$sql_query = 'create temporary table temp as (SELECT m.Member_ID,
-														 t.Title, 
-														 m.MemberName, 
-														 m.Date_join, 
-														 s.Status 
-												  FROM Member m, 
-													   Status s, 
-													   Title t 
-												  WHERE ' .$memberID. ' AND '
-													      .$title. ' AND ' 
-													      .$name. ' AND ' 
-													      .$join_date. ' AND ' 
-													      .$status. 
-														' AND m.Status_ID = s.Status_ID AND m.Title_ID = t.Title_ID)';
+	$sql_query = 'create temporary table temp as (SELECT f.Title,
+														 d.Name, 
+														 f.Year_Release 
+												  FROM film f, 
+													   director d 
+												  WHERE ' .$film_name. ' AND '
+													      .$director. ' AND ' 
+													      .$year_released.
+														' AND d.Director_ID = f.Director_ID)';
 	
 	//print the SQL statement (for debugging)	  
 	// print $sql_query;
@@ -86,9 +70,8 @@ if (isset($_POST['ID']) || isset($_POST['title']) || isset($_POST['name']) || is
 	$this->db->query($sql_query);
 	
 	//Present all in the temp table with a SQL select all command. 
-	$query = $this->db->query('SELECT Member_ID AS \'ID\', Title AS \'Title\', 
-									  MemberName AS \'Name\', Date_Join AS \'Date Joined\',
-									  Status AS \'Status\' 
+	$query = $this->db->query('SELECT Title AS \'Film Name\', Name AS \'Directors Name\', 
+									  Year_Release AS \'Year of Release\'		 
 							   FROM temp');
 	
 	echo $this->table->generate($query);
@@ -96,13 +79,21 @@ if (isset($_POST['ID']) || isset($_POST['title']) || isset($_POST['name']) || is
 } else {
 	
 	$tmpl = array ('table_open' => '<table class="mytable">');
+	
 	$this->table->set_template($tmpl); 
 	
 	$this->db->query('drop table if exists temp');
-	$this->db->query('create temporary table temp as (SELECT m.Member_ID, t.Title, m.MemberName, m.Date_Join, s.Status 
-													  FROM member m, title t, status s 
-													  WHERE m.Title_ID = t.Title_ID AND m.Status_ID = s.Status_ID )');
-	$query = $this->db->query('select * from temp;');
+	
+	$this->db->query('create temporary table temp as (SELECT f.Title,
+														     d.Name, 
+														     f.Year_Release 
+													  FROM film f, director d
+													  WHERE f.Director_ID = d.Director_ID)');
+													  
+		$query = $this->db->query('SELECT Title AS \'Film Name\', Name AS \'Directors Name\', 
+									      Year_Release AS \'Year of Release\'		 
+							       FROM temp');
+								   
 	echo $this->table->generate($query);
 	
 }

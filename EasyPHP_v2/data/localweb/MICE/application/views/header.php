@@ -31,13 +31,13 @@
 	   color: #FFFFFF; 
 	   background-color: #5F6980; 
 	   border: 1px solid #5F6980; 
-	   font-weight: bold
+	   font-weight: bold;
 	  }
 	  
 
 	/* Add a red background color to navbar links on hover */
 	.navbar a:hover, .dropdown:hover .dropbtn {
-	  background-color: #354263;;
+	  background-color: #354263;
 	}
 
 	/* Dropdown content (hidden by default) */
@@ -46,14 +46,14 @@
 	  position: absolute;
 	  background-color: #f9f9f9;
 	  min-width: auto;
-	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	  border: 1px solid grey;
+	  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.4);
+	  border: 1px grey;
 	  z-index: 1;
 	}
 
 	/* Links inside the dropdown */
 	.dropdown-content a {
-	  border: 2px solid black;
+	  border: 1px grey;
 	  float: none;
 	  color: black;
 	  padding: 12px 16px;
@@ -62,6 +62,7 @@
 	  text-align: center;
 	  font-weight: bold;
 	  border: 1px solid black;
+	  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.5);
 	}
 
 	/* Add a grey background color to dropdown links on hover */
@@ -75,11 +76,12 @@
 	}	
 		
 	#container {
-		width: 90%;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		padding-bottom: 25px;
+		padding-bottom: 50px;
 		background-color: #D5D5D5;
+		box-shadow: 16px 16px 16px 8px rgba(0,0,0,0.3);
 		z-index: 100;
 	}	
 	
@@ -93,12 +95,12 @@
 		
 		<!-- FESTIVAL INFORMATION DROPDOWN TO BE USED BY MEMBERS -->
 			<li><div class="dropdown">
-				<button class="dropbtn">Member information 
+				<button class="dropbtn">Festival information ⬇
 				<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
 					<a href="<?php echo site_url('main/query1')?>">List festival cinemas</a>
-					<a href="<?php echo site_url('main/query2')?>">Members List</a>
+					<a href="<?php echo site_url('main/query2')?>">Festival Films</a>
 					<a href="<?php echo site_url('main/query3')?>">Festival Performances</a>
 				</div> </div></li>
 				
@@ -109,7 +111,7 @@
 			
 			<!-- ADD/EDIT DROPDOWN TO BE USED BY DIRECTOR -->
 			<li><div class="dropdown">
-				<button class="dropbtn">Add/Edit Information 
+				<button class="dropbtn">Add/Edit Information ⬇
 				<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
