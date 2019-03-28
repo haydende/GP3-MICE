@@ -75,7 +75,7 @@
 		$screen_number = "Screen_ID = \"" .$_POST['screen_number']. "\"";
 	}
 	if ($_POST['date'] != "") {
-		$date = "Date = \"" .$_POST['date']. "\"";
+		$date = "Date LIKE '%" .$_POST['date']. "%'";
 	}
 	
 	if ($_POST['time'] != "") {

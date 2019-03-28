@@ -62,7 +62,7 @@
 	  text-align: center;
 	  font-weight: bold;
 	  border: 1px solid black;
-	  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.5);
+	  box-shadow: 16px 16px 16px 16px rgba(0,0,0,0.2);
 	}
 
 	/* Add a grey background color to dropdown links on hover */
